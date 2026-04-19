@@ -1,0 +1,40 @@
+/* PrimeNG Theme */
+@import "primeng/resources/themes/aura-light-blue/theme.css";
+@import "primeng/resources/primeng.min.css";
+@import "primeicons/primeicons.css";
+
+
+
+:root {
+  --primary-color: #4f46e5;
+}
+
+.dark {
+  --primary-color: #22c55e;
+  background-color: #111827;
+  color: #ffffff;
+}
+:root {
+  
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --success-color: #22c55e;
+  --danger-color: #ef4444;
+  --warning-color: #f59e0b;
+
+  
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+
+  
+  --bg-main: #ffffff;
+  --bg-soft: #f9fafb;
+
+  
+  --border-color: #e5e7eb;
+
+  
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}

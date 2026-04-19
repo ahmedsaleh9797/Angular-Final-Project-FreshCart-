@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+
 
 @import "tailwindcss";
 
@@ -9,5 +9,9 @@
 
 
 
+}
+.custom-input {
+  --p-inputtext-background: #fef3c7;
+  --p-inputtext-border-color: #f59e0b;
 }
 

@@ -2,7 +2,7 @@
   <div class="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto py-3">
     <a routerLink="home" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="images/freshcart-logo.svg" class="h-7" alt="freshcart-Logo" />
-
+      <svg-icon name="grater" />
     </a>
     <div class="flex justify-between md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
       <ul class="flex items-center gap-x-5">
@@ -15,10 +15,11 @@
         </li>
         <li>
           <button (click)="changeLang()"
-            class="cursor-pointer block px-[3px] md:py-2 md:px-3 text-black  rounded   md:p-0" aria-current="page">{{'navbar.AR'
+            class="cursor-pointer block px-[3px] md:py-2 md:px-3 text-black  rounded   md:p-0"
+            aria-current="page">{{'navbar.AR'
             |translate}}</button>
         </li>
-        
+
 
         @if(!isLogin){
         <li>

@@ -10,6 +10,7 @@ import { FooterComponent, NavbarComponent } from './features/components/layout';
   
   <div class="flex min-h-screen flex-col justify-between ">
 <app-navbar></app-navbar>
+
 <!-- <div class="w-11/12 mx-auto pt-12"> -->
 <router-outlet></router-outlet>
 <!-- </div> -->
@@ -24,7 +25,6 @@ export class App {
 
  cdr = inject(ChangeDetectorRef);
 
-  x (){
-    this.cdr.detectChanges()
-  }
+
+ 
 }

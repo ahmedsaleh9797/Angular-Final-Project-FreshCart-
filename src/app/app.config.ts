@@ -5,10 +5,11 @@ import { provideRouter, withComponentInputBinding, withInMemoryScrolling } from 
 import { setHeaderInterceptor } from '@core/interceptores/setHeader/set-header-interceptor';
 import { provideAngularSvgIcon } from 'angular-svg-icon';
 
+import { IconloaderService } from '@core/services/iconloader/iconloader.service';
 import { provideTranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
-import Aura from '@primeuix/themes/aura';
 import { providePrimeNG } from 'primeng/config';
+import { AppTheme } from 'src/theme/my-preset';
 import { routes } from './app.routes';
 import { errorInterceptor } from './core/interceptores/error-interceptor';
 import { MyTranslateService } from './core/services/myTranslate/my-translate.service';
@@ -18,7 +19,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     providePrimeNG({
       theme: {
-        preset: Aura
+        preset: AppTheme 
       }
     }),
     provideRouter(
@@ -31,7 +32,9 @@ export const appConfig: ApplicationConfig = {
 
     provideAppInitializer(() => inject(MyTranslateService).initialize()),
 
-    provideEnvironmentInitializer(() => { }),
+    provideEnvironmentInitializer(() => {
+      inject(IconloaderService).loadIcons();
+    }),
 
     provideTranslateService({
       defaultLanguage: 'en'

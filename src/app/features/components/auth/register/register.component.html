@@ -1,19 +1,19 @@
 <section class="w-3/4 mx-auto">
 
 
- 
+
     <h1 class="mt-12 text-green-600 text-xl font-medium  my-5">register now :</h1>
     @if(errMsg()){
-<div class="p-1 text-sm text-fg-danger-strong rounded-base bg-danger-soft" role="alert">
-     <p>{{errMsg()}}</p>
-  
-</div>        
- }
+    <div class="p-1 text-sm text-fg-danger-strong rounded-base bg-danger-soft" role="alert">
+        <p>{{errMsg()}}</p>
+
+    </div>
+    }
     <form [formGroup]="registerForm" (ngSubmit)="submitRegisterForm()">
 
         <div class="mb-3">
             <label for="name" class="block mb-1 text-sm font-medium text-heading">name :</label>
-            <input formControlName="name" type="text" id="name"
+            <input class="custom-input" formControlName="name" type="text" id="name"
                 class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-green-600 focus:border-green-600 block w-full px-3 py-2.5 shadow-xs placeholder:text-body" />
             @if (registerForm.get('name')?.errors && registerForm.get('name')?.touched) {
             <div class="p-1 text-sm text-fg-danger-strong rounded-base bg-danger-soft" role="alert">
@@ -96,7 +96,7 @@
                 }
 
             </div>
-            }   
+            }
         </div>
 
 
@@ -117,13 +117,13 @@
         </div>
 
         <button [disabled]="registerForm.invalid" class="btn-main mb-5 block ms-auto">
-@if (isLoading()) {
-<span><i class="fa-solid fa-spinner fa-spin"></i></span>
-}
+            @if (isLoading()) {
+            <span><i class="fa-solid fa-spinner fa-spin"></i></span>
+            }
 
-@else{
-<span>Register</span>
-}
+            @else{
+            <span>Register</span>
+            }
         </button>
 
 
